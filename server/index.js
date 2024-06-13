@@ -3,25 +3,22 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require("cors");
 
+const PORT = 5000;
 
-//middleware
-
-// app.use(express.json());
+// Middleware
 app.use(bodyParser.json());
 app.use(cors());
 
-//routes
+// Import and use the routers
+const authRouter = require('./routes/Authentication');
+const formRouter = require('./routes/form');
+const dashboardRouter = require('./routes/Dashboard');
 
-//register and login routes
-app.use("/auth", require("./routes/Authentication"));
+app.use('/auth', authRouter); // Authentication routes
+app.use('/api', formRouter);  // Form submission routes
+app.use('/dashboard', dashboardRouter); // Dashboard routes
 
-
-// Dashboard route
-
-app.use("/dashboard", require("./routes/Dashboard"));
-
-
-app.listen(5000, ()=>{
-    
-    console.log("server is running on port 5000");
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -1,111 +1,88 @@
-.main_containor {
-  display: flex;
-}
-
-.sidebar {
-  width: 250px;
-  height: 100vh;
-  background-color: #f4f4f4;
+.dashboard-container {
+  max-width: 600px;
+  margin: 50px auto;
   padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
-.components {
-  padding-top: 20px;
-}
-
-.component {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  text-decoration: none;
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
   color: #333;
 }
 
-.component:hover {
-  background-color: #ddd;
-}
-
-.icons {
-  margin-right: 10px;
-}
-
-.submenu-wrap {
-  display: none;
-}
-
-.component:hover .submenu-wrap {
-  display: block;
-}
-
-.submenu {
-  padding-left: 20px;
-}
-
-.subcomponent {
+form {
   display: flex;
-  align-items: center;
-  padding: 8px 0;
+  flex-direction: column;
 }
 
-.subcomponent:hover {
-  background-color: #eee;
-}
-
-.icons {
-  margin-right: 10px;
-}
-
-.Botton {
-  padding: 20px;
-  background-color: #ddd;
-}
-
-.Profile {
-  display: flex;
-  align-items: center;
-  padding: 8px 0;
-}
-
-.pic {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 10px;
-}
-
-.pic img {
+form input[type="text"],
+form input[type="number"],
+form input[type="Address"],
+form select.options,
+form select.country-code {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.name h5 {
-  margin: 0;
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
-.name p {
-  margin: 0;
-  font-size: 14px;
+form div input[type="number"] {
+  width: 75%;
 }
 
-.arrow {
-  margin-left: auto;
+form button[type="submit"],
+.review-container button {
+  padding: 10px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.notification {
-  padding: 8px 0;
+form button[type="submit"]:hover,
+.review-container button:hover {
+  background-color: #0056b3;
 }
 
-.logout {
-  padding: 8px 0;
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FF5733;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.logout a {
-  color: #f00; /* Red color for logout link */
+button:hover {
+  background-color: #c4421d;
 }
 
-.dashboard-container {
-  flex: 1;
-  padding: 20px;
+.review-container {
+  text-align: left;
+}
+
+.review-container p {
+  margin: 10px 0;
+}
+
+.review-container button {
+  margin: 10px 5px;
 }

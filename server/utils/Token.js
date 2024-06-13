@@ -10,3 +10,4 @@ function Token(user_id) {
 }
 
 module.exports = Token;
+
